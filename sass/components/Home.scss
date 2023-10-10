@@ -1,0 +1,30 @@
+.Home{
+    @include fullv;
+    @include center;
+    h1{
+        font-size: 4rem;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    h2{
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .Links{
+        display: flex;
+        justify-content: space-evenly;
+        width: 15rem;
+        a{
+            padding: .5rem;
+            img{
+                width: 3rem;
+            }
+            &:hover{
+                transition: background-color 0.3s ease;
+                border-radius: .5rem;
+                background-color: rgba(128, 128, 128, 0.164);
+            }
+        }
+    }
+}
+  

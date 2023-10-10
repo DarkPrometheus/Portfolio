@@ -1,0 +1,140 @@
+.Content{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 4rem;
+    .Rigth{
+        width: 42rem;
+        padding: 4rem;
+        h3{
+            font-size: 1.8rem;
+        }
+        h4{
+            font-size: 1.4rem;
+            color: rgb(100 116 139);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        p{
+            margin: .8rem 0;
+            font-size: 1.1rem;
+            color: #8290A6;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    }
+    .Left{
+        width: 42rem;
+        padding: 4rem;
+        .Exp{
+            .Element{
+                padding: 1.5rem;
+                display: grid;
+                grid-template-columns: 32% 68%;
+                .dates{
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: .9rem;
+                    color: rgb(100 116 139);
+                }
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    .Position{
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+                    .Company{
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-size: 1.1rem;
+                        color: rgb(100 116 139);
+                        margin-bottom: .5rem;
+                        margin-top: .2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-family: 'Ubuntu', sans-serif;
+                        color: #8290A6;
+                    }
+                    .Technologies{
+                        display: flex;
+                        padding: 1rem 0;
+                        flex-wrap: wrap;
+                        .Technology{
+                            margin: .3rem .5rem .3rem 0;
+                            padding: .5rem 1rem;
+                            border-radius: 2rem;
+                            font-size: 1rem;
+                            background-color: #112B3A;
+                            color: rgba(94 234 212);
+                            &:hover{
+                                cursor: pointer;
+                                background-color: lighten($color: #112B3A, $amount: 5%);
+                            }
+                        }
+                    }
+                }
+                
+                transition: background-color 0.3s;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    background: inherit;
+                    z-index: -1;
+                    transform: scale(0);
+                    transition: transform 0.3s, opacity 0.3s;
+                }
+                &:hover{
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                    background-color: rgba(128, 128, 128, 0.151);
+                    border-radius: .5rem;
+                }
+                &:hover::before {
+                    transform: scale(1);
+                    opacity: 0;
+                    transition: transform 0.3s, opacity 0.3s;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes miAnimacion {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* Establece los estilos iniciales del elemento */
+.mi-elemento {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+  }
+  
+  /* Aplica los estilos cuando el mouse está sobre el elemento */
+  .mi-elemento:hover {
+    background-color: red;
+  }
+  
+  /* Define la animación de salida */
+  @keyframes salidaHover {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0.8); /* Puedes ajustar la escala y la opacidad según tus preferencias */
+      opacity: 0.5;
+    }
+  }
