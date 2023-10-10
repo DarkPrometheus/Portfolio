@@ -3,9 +3,8 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding: 4rem;
     .Rigth{
-        width: 42rem;
+        width: 500px;
         padding: 4rem;
         h3{
             font-size: 1.8rem;
@@ -104,37 +103,98 @@
     }
 }
 
-
-@keyframes miAnimacion {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.2);
+@media screen and (max-width: $computadoraGrande) {
+    .Content{
+        .Rigth{
+            padding: 4rem 2rem;
+        }
+        .Left{
+            padding: 4rem 2rem;
+            .Exp{
+                .Element{
+                    .content{
+                        .Technologies{
+                            .Technology{
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
     }
 }
 
-/* Establece los estilos iniciales del elemento */
-.mi-elemento {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
-  }
-  
-  /* Aplica los estilos cuando el mouse está sobre el elemento */
-  .mi-elemento:hover {
-    background-color: red;
-  }
-  
-  /* Define la animación de salida */
-  @keyframes salidaHover {
-    from {
-      transform: scale(1);
-      opacity: 1;
+@media screen and (max-width: $computadoraMediana) {
+    .Content{
+        .Rigth{
+            padding: 4rem 2rem;
+        }
+        .Left{
+            padding: 4rem 1rem;
+            .Exp{
+                .Element{
+                    .content{
+                        .Technologies{
+                            .Technology{
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-    to {
-      transform: scale(0.8); /* Puedes ajustar la escala y la opacidad según tus preferencias */
-      opacity: 0.5;
+}
+
+@media screen and (max-width: $tablet) {
+    .Content{
+        flex-direction: column;
+        .Rigth{
+            width: auto;
+        }
+        .Left{
+            padding: 4rem 1rem;
+            width: auto;
+            .Exp{
+                .Element{
+                    .content{
+                        .Technologies{
+                            .Technology{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
+}
+
+@media screen and (max-width: $telefono) {
+    .Content{
+        .Rigth{
+            width: auto;
+        }
+        .Left{
+            padding: 4rem 1rem;
+            width: auto;
+            .Exp{
+                .Element{
+                    display: flex;
+                    flex-direction: column;
+                    .content{
+                        .Technologies{
+                            .Technology{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

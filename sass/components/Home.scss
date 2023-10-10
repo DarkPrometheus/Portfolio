@@ -27,4 +27,29 @@
         }
     }
 }
-  
+
+@media screen and (max-width: $computadoraGrande) {
+    .Home{
+        
+    }
+}
+
+@media screen and (max-width: $computadoraMediana) {
+    .Home{
+
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .Home{
+        h1{
+            font-size: 2.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: $telefono) {
+    .Home{
+        
+    }
+}
