@@ -1,6 +1,11 @@
+@import '../mixins/mixins';
+@import '../mixins/dimensiones';
+@import "../base/settings";
+
 .Home{
     @include fullv;
     @include center;
+
     h1{
         font-size: 4rem;
         font-family: 'Ubuntu', sans-serif;

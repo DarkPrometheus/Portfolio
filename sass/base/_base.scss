@@ -1,12 +1,11 @@
 /* Configuracion basica para SASS */
-@import "../mixins/dimensiones";
-@import "../mixins/estilosDeElementos";
-@import "../mixins/estilosVisuales";
-@import "../mixins/flexbox";
-@import "../mixins/grid";
-@import "../mixins/posicionamientos";
 @import "../mixins/mixins";
+@import '../mixins/estilosDeElementos';
 
+html{
+    min-height: 100vh;
+    @include scrollbar(auto, auto);
+}
 *{
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -14,6 +13,7 @@
     box-sizing: border-box;
 }
 body{
+    min-height: 100vh;
     color: whitesmoke;
     overflow-x: hidden;
     font-size: 10px;

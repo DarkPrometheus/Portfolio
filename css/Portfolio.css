@@ -1,0 +1,60 @@
+/* Descontinuado */
+/* Descontinuado */
+/**
+ * Mixin fullv.
+ *
+ * Establece el ancho y alto de un elemento al 100% del viewport.
+ */
+/**
+ * Mixin full.
+ *
+ * Establece el ancho y alto de un elemento al 100% del contenedor padre.
+ */
+/** Screens **/
+/* Computadora */
+/* Tablet */
+/* Telefono */
+.Home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Home h1 {
+  font-size: 4rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.Home h2 {
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+.Home .Links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 15rem;
+}
+.Home .Links a {
+  padding: 0.5rem;
+}
+.Home .Links a img {
+  width: 3rem;
+}
+.Home .Links a:hover {
+  transition: background-color 0.3s ease;
+  border-radius: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.164);
+}
+
+@media screen and (max-width: 767px) {
+  .Home h1 {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .Home h1 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=Portfolio.css.map */

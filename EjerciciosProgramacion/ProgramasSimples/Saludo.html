@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/styles.css" />
+        <link rel="stylesheet" href="../../css/Home.min.css" />
+        <link rel="stylesheet" href="../../css/Ejercicios.min.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100;1,500&family=Roboto:wght@400;500;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+
+        <link href="../../css/prism.css" rel="stylesheet" />
+
+        <title>Saludo</title>
+    </head>
+    <body>
+        <iframe class="Navbar" src="../Components/Navbar.html" frameborder="0"></iframe>
+        <div class="mainContent">
+            <iframe class="Menu" src="../Components/Menu.html" frameborder="0"></iframe>
+            <main>
+                <div class="content">
+                    <h1>👋 Saludo</h1>
+                    <article class="articulo">
+                        <h3>Instrucciones</h3>
+                        <p>Escriba un programa que pida al usuario que escriba su nombre, y lo salude llamándolo por su nombre.</p>
+
+                        <h3>Resultado esperado</h3>
+                        <p class="result">
+                            <span>Ingrese su nombre: <i>Perico</i></span>
+                            <span>Hola, Perico</span>
+                        </p>
+
+                        <h3>Explicacion</h3>
+                        <p>Este ejercicio es un ejercicio básico que se asemeja al famoso "Hola Mundo" en el mundo de la programación, pero en lugar de simplemente imprimir "Hola, Mundo", estamos interactuando con el usuario.</p>
+
+                        <h3>Pasos clave</h3>
+                        <ul>
+                            <li><b>Solicitud de entrada:</b> En este ejercicio, el primer paso es solicitar al usuario que ingrese su nombre. Esto se puede lograr utilizando una función de entrada en el lenguaje de programación que estés utilizando.</li>
+                            <li><b>Almacenamiento en una variable:</b> Una vez que el usuario ingrese su nombre, debes almacenarlo en una variable. En este caso, necesitarás una variable para almacenar el nombre del usuario.</li>
+                            <li><b>Generación de salida adecuada:</b> Luego, debes generar la salida deseada. En este ejercicio, la salida esperada es saludar al usuario por su nombre. Debes utilizar la variable que contiene el nombre del usuario para crear la cadena de saludo.</li>
+                        </ul>
+
+                        <div class="exampleTitle">
+                            <h3>Ejemplo resuelto</h3>
+                            <img id="closedEye" src="../img/closedEye.png" alt="">
+                            <img id="eye" style="display: none;" src="../img/eye.png" alt="">
+                        </div>
+                        <div id="codeContainer" class="example hideCode" style="height: 18rem;">
+                            <div class="tabs">
+                                <span id="btnCsharp" class="active">C#</span>
+                                <span id="btnJs">JS</span>
+                            </div>
+                            <pre id="csharpCode">
+                                <code class="language-csharp">
+    private static void Main(string[] args)
+    {
+        Console.Write("Ingrese su nombre:");
+        string nombre = Console.ReadLine();
+        Console.WriteLine("Hola, " +  nombre);
+    }
+                                </code>
+                                <img id="csharpCopy" src="../img/copia.png" alt="">
+                            </pre>
+                            <pre style="display: none;" id="jsCode">
+                                <code class="language-csharp">
+    let nombre = prompt("Ingrese su nombre:");
+
+    alert("Hola, " + nombre);
+
+                                </code>
+                                <img id="jsCopy" src="../img/copia.png" alt="">
+                            </pre>
+                        </div>
+
+                        <h3>Demostracion</h3>
+                        <div class="demo">
+                            <div style="margin-top: 1rem;">
+                                <span>Ingrese su nombre:</span>
+                                <input id="input" onkeypress="copiarTexto(event)" type="text">
+                            </div>
+                            <span id="result"></span>
+                        </div>
+
+                        <div class="Navegacion">
+                            
+                        </div>
+                    </article>
+                    <div class="footer"></div>
+                </div>
+            </main>
+        </div>
+
+        <script src="../../js/prism.js"></script>
+        <script src="../../js/funciones.js"></script>
+
+        <script>
+            function copiarTexto(event) {
+                if (event.key === "Enter") {
+                    // Obtén el valor del input
+                    var texto = document.getElementById("input").value;
+
+                    // Asigna el valor al elemento de destino
+                    document.getElementById("result").textContent = "Hola, " + texto;
+
+                    // Limpia el input
+                    document.getElementById("input").value = "";
+                }
+            }
+        </script>
+    </body>
+</html>

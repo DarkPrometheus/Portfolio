@@ -4,16 +4,8 @@
 /* Tablet */
 /* Telefono */
 /* Configuracion basica para SASS */
-/**
- * Mixin fullv.
- *
- * Establece el ancho y alto de un elemento al 100% del viewport.
- */
-/**
- * Mixin full.
- *
- * Establece el ancho y alto de un elemento al 100% del contenedor padre.
- */
+/* Descontinuado */
+/* Descontinuado */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
 /**
  * Mixin para estilos de entrada (input).
@@ -49,104 +41,11 @@
  * Argumentos:
  *   - $size: Tamaño del radio de los bordes.
  */
-/**
- * Mixin para estilos personalizados de la barra de desplazamiento.
- *
- * Aplica estilos personalizados a la barra de desplazamiento en navegadores webkit.
- *
- * Argumentos:
- *   - $x: Valor de la propiedad overflow-x para controlar la visibilidad horizontal de la barra de desplazamiento.
- *   - $y: Valor de la propiedad overflow-y para controlar la visibilidad vertical de la barra de desplazamiento.
- *
- * Nota: Este mixin solo afecta a los navegadores webkit (Chrome, Safari, etc.).
- */
-/**
- * Mixin para gradientes lineales.
- *
- * Genera un gradiente lineal entre dos colores.
- *
- * Argumentos:
- *   - $start-color: Color de inicio del gradiente.
- *   - $end-color: Color final del gradiente.
- */
-/**
- * Mixin para sombra de texto.
- *
- * Aplica una sombra de texto personalizada a un elemento.
- *
- * Argumentos:
- *   - $color: Color de la sombra de texto.
- *   - $x-offset: Desplazamiento horizontal de la sombra.
- *   - $y-offset: Desplazamiento vertical de la sombra.
- *   - $blur: Desenfoque de la sombra.
- */
-/**
- * Mixin para animaciones.
- *
- * Aplica una animación personalizada a un elemento.
- *
- * Argumentos:
- *   - $name: Nombre de la animación.
- *   - $duration: Duración de la animación.
- *   - $timing-function: Función de temporización de la animación.
- *   - $delay: Retraso antes de que comience la animación.
- *   - $iteration-count: Cantidad de veces que se repetirá la animación.
- *   - $direction: Dirección de la animación.
- */
-/**
- * Mixin para sombra de caja.
- *
- * Aplica una sombra de caja personalizada a un elemento.
- *
- * Argumentos:
- *   - $x-offset: Desplazamiento horizontal de la sombra.
- *   - $y-offset: Desplazamiento vertical de la sombra.
- *   - $blur: Desenfoque de la sombra.
- *   - $spread: Extensión de la sombra.
- *   - $color: Color de la sombra.
- */
-/**
- * Mixin para transiciones.
- *
- * Aplica una transición personalizada a las propiedades de un elemento.
- *
- * Argumentos:
- *   - $properties: Propiedades a las que se aplicará la transición.
- *   - $duration: Duración de la transición.
- *   - $timing-function: Función de temporización de la transición.
- *   - $delay: Retraso antes de que comience la transición.
- */
-/**
- * Mixin flex.
- *
- * Aplica un contenedor flexible con dirección y alineación personalizadas.
- *
- * Argumentos:
- *   - $direction: Dirección del contenedor flexible (row, row-reverse, column, column-reverse).
- *   - $center: Opcional. Centra los elementos horizontal y verticalmente dentro del contenedor si se establece en 'center'.
- */
-/**
- * Mixin grid.
- *
- * Establece un contenedor con sistema de grilla utilizando columnas del mismo tamaño.
- *
- * Argumentos:
- *   - $cols: Número de columnas en la grilla.
- *   - $size: Tamaño de cada columna.
- */
-/**
- * Mixin pAbsolte.
- *
- * Establece la posición de un elemento como absoluta y lo sitúa en la esquina superior izquierda del contenedor padre.
- */
-/**
- * Mixin centerAbsolute.
- *
- * Establece la posición de un elemento como absoluta y lo centra horizontalmente en el contenedor padre.
- */
-/* Descontinuado */
-/* Descontinuado */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+html {
+  min-height: 100vh;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -155,6 +54,7 @@
 }
 
 body {
+  min-height: 100vh;
   color: whitesmoke;
   overflow-x: hidden;
   font-size: 10px;
@@ -341,50 +241,6 @@ a {
  */
 /* Descontinuado */
 /* Descontinuado */
-.Home {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.Home h1 {
-  font-size: 4rem;
-  font-family: "Ubuntu", sans-serif;
-}
-.Home h2 {
-  margin: 1.5rem 0;
-  font-size: 1.5rem;
-  font-family: "Ubuntu", sans-serif;
-}
-.Home .Links {
-  display: flex;
-  justify-content: space-evenly;
-  width: 15rem;
-}
-.Home .Links a {
-  padding: 0.5rem;
-}
-.Home .Links a img {
-  width: 3rem;
-}
-.Home .Links a:hover {
-  transition: background-color 0.3s ease;
-  border-radius: 0.5rem;
-  background-color: rgba(128, 128, 128, 0.164);
-}
-
-@media screen and (max-width: 767px) {
-  .Home h1 {
-    font-size: 2.7rem;
-  }
-}
-@media screen and (max-width: 520px) {
-  .Home h1 {
-    text-align: center;
-  }
-}
 .Content {
   width: 100vw;
   display: flex;
