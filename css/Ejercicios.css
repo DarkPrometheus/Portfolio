@@ -1,25 +1,121 @@
+@charset "UTF-8";
 /* Descontinuado */
 /* Descontinuado */
 /** Screens **/
 /* Computadora */
 /* Tablet */
 /* Telefono */
+/**
+ * Mixin para estilos personalizados de la barra de desplazamiento.
+ *
+ * Aplica estilos personalizados a la barra de desplazamiento en navegadores webkit.
+ *
+ * Argumentos:
+ *   - $x: Valor de la propiedad overflow-x para controlar la visibilidad horizontal de la barra de desplazamiento.
+ *   - $y: Valor de la propiedad overflow-y para controlar la visibilidad vertical de la barra de desplazamiento.
+ *
+ * Nota: Este mixin solo afecta a los navegadores webkit (Chrome, Safari, etc.).
+ */
+/**
+ * Mixin para gradientes lineales.
+ *
+ * Genera un gradiente lineal entre dos colores.
+ *
+ * Argumentos:
+ *   - $start-color: Color de inicio del gradiente.
+ *   - $end-color: Color final del gradiente.
+ */
+/**
+ * Mixin para sombra de texto.
+ *
+ * Aplica una sombra de texto personalizada a un elemento.
+ *
+ * Argumentos:
+ *   - $color: Color de la sombra de texto.
+ *   - $x-offset: Desplazamiento horizontal de la sombra.
+ *   - $y-offset: Desplazamiento vertical de la sombra.
+ *   - $blur: Desenfoque de la sombra.
+ */
+/**
+ * Mixin para animaciones.
+ *
+ * Aplica una animación personalizada a un elemento.
+ *
+ * Argumentos:
+ *   - $name: Nombre de la animación.
+ *   - $duration: Duración de la animación.
+ *   - $timing-function: Función de temporización de la animación.
+ *   - $delay: Retraso antes de que comience la animación.
+ *   - $iteration-count: Cantidad de veces que se repetirá la animación.
+ *   - $direction: Dirección de la animación.
+ */
+/**
+ * Mixin para sombra de caja.
+ *
+ * Aplica una sombra de caja personalizada a un elemento.
+ *
+ * Argumentos:
+ *   - $x-offset: Desplazamiento horizontal de la sombra.
+ *   - $y-offset: Desplazamiento vertical de la sombra.
+ *   - $blur: Desenfoque de la sombra.
+ *   - $spread: Extensión de la sombra.
+ *   - $color: Color de la sombra.
+ */
+/**
+ * Mixin para transiciones.
+ *
+ * Aplica una transición personalizada a las propiedades de un elemento.
+ *
+ * Argumentos:
+ *   - $properties: Propiedades a las que se aplicará la transición.
+ *   - $duration: Duración de la transición.
+ *   - $timing-function: Función de temporización de la transición.
+ *   - $delay: Retraso antes de que comience la transición.
+ */
 .mainContent main .content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .mainContent main .content .MenuProgramas {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 70vh;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 30px;
   column-gap: 30px;
+  padding: 1rem;
+}
+.mainContent main .content .MenuProgramas::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.mainContent main .content .MenuProgramas::-webkit-scrollbar:hover {
+  background-color: #d4d4d4;
+}
+.mainContent main .content .MenuProgramas::-webkit-scrollbar-thumb {
+  background-color: rgb(128, 128, 128);
+  border-radius: 4px;
+}
+.mainContent main .content .MenuProgramas::-webkit-scrollbar-track {
+  background-color: transparent;
+  height: 90%;
+}
+.mainContent main .content .MenuProgramas:focus::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.mainContent main .content .MenuProgramas:focus {
+  outline: none;
 }
 .mainContent main .content .MenuProgramas .Programa {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: auto;
+  height: auto;
   flex-direction: column;
   border-radius: 1rem;
   padding: 3.5rem 0;
@@ -173,6 +269,7 @@
   .mainContent main .content .MenuProgramas {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
+    justify-items: center;
   }
   .mainContent main .content .MenuProgramas .Programa {
     width: 15rem;
