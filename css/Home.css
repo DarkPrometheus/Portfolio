@@ -94,7 +94,6 @@ body .mainContent .Menu {
   min-height: 50%;
   border-right: 1px rgb(0, 0, 0) solid;
   box-shadow: 0px 0px 23px 3px rgba(0, 0, 0, 0.53);
-  z-index: 0;
 }
 body .mainContent main {
   flex: auto;
@@ -103,7 +102,7 @@ body .mainContent main {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 94vh;
-  z-index: 1;
+  z-index: 10;
 }
 body .mainContent main::-webkit-scrollbar {
   width: 8px;
@@ -211,9 +210,12 @@ body .mainContent main .content .social a img {
 }
 @media screen and (max-width: 990px) {
   body .mainContent {
+    position: relative;
     flex-direction: column;
+    padding-top: 5rem;
   }
   body .mainContent .Menu {
+    top: 0;
     position: absolute;
     max-width: 100%;
     width: 100vw;
@@ -221,7 +223,6 @@ body .mainContent main .content .social a img {
   }
   body .mainContent main {
     padding-top: 1rem;
-    margin-top: 5rem;
   }
 }
 @media screen and (max-width: 767px) {

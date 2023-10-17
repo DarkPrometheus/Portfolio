@@ -36,29 +36,43 @@
     </nav>
 
     <script>
+        let parent = null;
+        let messageReceived = false;
+
         window.addEventListener("message", ({ data, source }) => {
-            console.log(data);
+            if (parent === null) {
+                parent = source;
+            }
+
             if (data <= 420) {
                 let nav = document.getElementById('nav');
-                console.log(nav)
                 nav.className = "mobile";
             }
+
+            // Establecer la bandera para indicar que se ha recibido un mensaje
+            messageReceived = true;
         });
 
         let btnMenu = document.getElementById('menu');
-        let butons = document.getElementById('butons')
+        let butons = document.getElementById('butons');
         let active = false;
 
         btnMenu.addEventListener('click', function () {
-            if (!active) {
-                butons.style = "opacity: 1;"
-                active = true;
+            if (!messageReceived) {
+                return;
             }
-            else{
-                butons.style = "opacity: 0;"
+
+            if (!active) {
+                butons.style = "opacity: 1;";
+                active = true;
+            } else {
+                butons.style = "opacity: 0;";
                 active = false;
             }
+
+            parent.postMessage(active);
         });
+
     </script>
 </body>
 </html>

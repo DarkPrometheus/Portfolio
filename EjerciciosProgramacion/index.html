@@ -37,16 +37,6 @@
         </main>
     </div>
 
-    <script>
-        const iframe = document.getElementById("menu");
-        // we will assign this value once the iframe is ready
-        let iWindow = null;;
-
-        // Once the iframe is done loading, assign its window object to the variable we prepared earlier
-        iframe.addEventListener("load", () => {
-            iWindow = iframe.contentWindow;
-            iWindow.postMessage(window.innerWidth);
-        });
-      </script>
+    <script src="../js/menuResponsive.js"></script>
 </body>
 </html>
