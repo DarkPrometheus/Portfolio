@@ -1,5 +1,9 @@
 /* Descontinuado */
 /* Descontinuado */
+/** Screens **/
+/* Computadora */
+/* Tablet */
+/* Telefono */
 .mainContent main .content {
   display: flex;
   flex-direction: column;
@@ -149,7 +153,56 @@
 .mainContent main .content .articulo span {
   font-size: 1.1rem;
 }
-.mainContent main .content .footer {
+
+.footer {
   min-height: 6rem;
   width: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+  .mainContent main .content .MenuProgramas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainContent main .content .MenuProgramas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 990px) {
+  .mainContent main .content .MenuProgramas {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+  .mainContent main .content .MenuProgramas .Programa {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mainContent main .content .MenuProgramas {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mainContent main .content .MenuProgramas .Programa span {
+    font-size: 2.5rem;
+  }
+  .mainContent main .content .MenuProgramas .Programa span:nth-child(2) {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .mainContent main .content .MenuProgramas {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 40px;
+  }
+  .mainContent main .content .MenuProgramas .Programa {
+    width: 10rem;
+    height: 10rem;
+  }
+  .mainContent main .content .MenuProgramas .Programa span {
+    font-size: 2.2rem;
+  }
+  .mainContent main .content .MenuProgramas .Programa span:nth-child(2) {
+    font-size: 1.4rem;
+  }
 }/*# sourceMappingURL=Ejercicios.css.map */

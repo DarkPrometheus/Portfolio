@@ -18,7 +18,7 @@
 <body>
     <iframe class="Navbar" src="../Components/Navbar.html" frameborder="0"></iframe>
     <div class="mainContent">
-        <iframe class="Menu" src="../Components/Menu.html" frameborder="0"></iframe>
+        <iframe id="menu" class="Menu" src="../Components/Menu.html" frameborder="0"></iframe>
         <main>
             <div class="content">
                 <h1>Programas Simples</h1>
@@ -67,5 +67,17 @@
             </div>
         </main>
     </div>
+
+    <script>
+        const iframe = document.getElementById("menu");
+        // we will assign this value once the iframe is ready
+        let iWindow = null;;
+
+        // Once the iframe is done loading, assign its window object to the variable we prepared earlier
+        iframe.addEventListener("load", () => {
+            iWindow = iframe.contentWindow;
+            iWindow.postMessage(window.innerWidth);
+        });
+      </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 @import "../../mixins/mixins";
+@import "../../base/settings";
 
 .mainContent{
     main{
@@ -147,9 +148,93 @@
                     font-size: 1.1rem;
                 }
             }
-            .footer{
-                min-height: 6rem;
-                width: 100%;
+        }
+    }
+}
+.footer{
+    min-height: 6rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+    .mainContent{
+        main{
+            .content{
+                .MenuProgramas{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $computadoraGrande) {
+    .mainContent{
+        main{
+            .content{
+                .MenuProgramas{
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $computadoraMediana) {
+    .mainContent{
+        main{
+            .content{
+                .MenuProgramas{
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 80px;
+                    .Programa{
+                        width: 15rem;
+                        height: 15rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .mainContent{
+        main{
+            .content{
+                .MenuProgramas{
+                    grid-template-columns: repeat(1, 1fr);
+                    .Programa{
+                        span{
+                            font-size: 2.5rem;
+                            &:nth-child(2){
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $telefono) {
+    .mainContent{
+        main{
+            .content{
+                .MenuProgramas{
+                    grid-template-columns: repeat(1, 1fr);
+                    column-gap: 40px;
+                    .Programa{
+                        width: 10rem;
+                        height: 10rem;
+                        span{
+                            font-size: 2.2rem;
+                            &:nth-child(2){
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

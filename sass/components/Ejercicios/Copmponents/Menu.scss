@@ -1,4 +1,5 @@
 @import "../../../mixins/mixins";
+@import "../../../base/settings";
 
 html{
     height: 100%;
@@ -17,15 +18,6 @@ body{
 
 nav{
     width: 100%;
-    background-color: lighten($color: #2C2C33, $amount: 2%);
-    .logo{
-        @include center;
-        background-color: #2c2c33;
-        padding: 2rem;
-        img{
-            width: 50%;
-        }
-    }
     ul{
         margin: 0;
         padding: 0;
@@ -116,3 +108,243 @@ nav{
         }
     }
 }
+
+@media screen and (max-width: $computadoraMediana) {
+    nav{
+        background-color: transparent;
+        .logo{
+            background-color: #2c2c33;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: auto;
+                height: 4rem;
+                width: 4rem;
+                &:nth-child(2){
+                    height: 3rem;
+                    width: 3rem;
+                    display: block;
+                }
+            }
+        }
+        ul{
+            opacity: 0;
+            transition: opacity .3s;
+            li{
+                .buttonContent{
+                    img{
+                        
+                    }
+                    a{
+                        
+                    }
+                    input{
+                        
+                    }
+                    &:hover{
+                        
+                    }
+                }
+                .subMenu{
+                    .buttonContent{
+                        
+                    }
+                    li{
+                        
+                    }
+                }
+                &:hover{
+                    
+                }
+                &:has(:checked){
+                    .buttonContent{
+                        
+                    }
+                    .subMenu{
+                        
+                        transition: background-color .3s;
+                        li{
+                            
+                        }
+                        .buttonContent{
+                            
+                        }
+                        &:hover{
+                            
+                        }
+                    }
+                    .arrow{
+                        
+                    }
+                }
+                .arrow{
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+
+}
+
+@media screen and (max-width: $telefono) {
+
+}
+
+@media screen and (max-width: $telefono) {
+
+}
+
+@media screen and (max-width: 390px) {
+    nav{
+        background-color: lighten($color: #2C2C33, $amount: 2%);
+        .logo{
+            @include center;
+            padding: 2rem;
+            img{
+                width: 5rem;
+                height: 5rem;
+                &:nth-child(2){
+                    display: none;
+                }
+            }
+        }
+        ul{
+            opacity: 1;
+            transition: opacity .3s;
+            li{
+                .buttonContent{
+                    img{
+                        
+                    }
+                    a{
+                        
+                    }
+                    input{
+                        
+                    }
+                    &:hover{
+                        
+                    }
+                }
+                .subMenu{
+                    .buttonContent{
+                        
+                    }
+                    li{
+                        
+                    }
+                }
+                &:hover{
+                    
+                }
+                &:has(:checked){
+                    .buttonContent{
+                        
+                    }
+                    .subMenu{
+                        
+                        transition: background-color .3s;
+                        li{
+                            
+                        }
+                        .buttonContent{
+                            
+                        }
+                        &:hover{
+                            
+                        }
+                    }
+                    .arrow{
+                        
+                    }
+                }
+                .arrow{
+                    
+                }
+            }
+        }
+    }
+    .mobile{
+        background-color: transparent;
+        .logo{
+            background-color: #2c2c33;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: auto;
+                height: 4rem;
+                width: 4rem;
+                &:nth-child(2){
+                    height: 3rem;
+                    width: 3rem;
+                    display: block;
+                }
+            }
+        }
+        ul{
+            opacity: 0;
+            transition: opacity .3s;
+            li{
+                .buttonContent{
+                    img{
+                        
+                    }
+                    a{
+                        
+                    }
+                    input{
+                        
+                    }
+                    &:hover{
+                        
+                    }
+                }
+                .subMenu{
+                    .buttonContent{
+                        
+                    }
+                    li{
+                        
+                    }
+                }
+                &:hover{
+                    
+                }
+                &:has(:checked){
+                    .buttonContent{
+                        
+                    }
+                    .subMenu{
+                        
+                        transition: background-color .3s;
+                        li{
+                            
+                        }
+                        .buttonContent{
+                            
+                        }
+                        &:hover{
+                            
+                        }
+                    }
+                    .arrow{
+                        
+                    }
+                }
+                .arrow{
+                    
+                }
+            }
+        }
+    }
+}
+

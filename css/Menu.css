@@ -1,5 +1,9 @@
 /* Descontinuado */
 /* Descontinuado */
+/** Screens **/
+/* Computadora */
+/* Tablet */
+/* Telefono */
 html {
   height: 100%;
   font-family: "Ubuntu", sans-serif;
@@ -16,18 +20,6 @@ body {
 
 nav {
   width: 100%;
-  background-color: #313138;
-}
-nav .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #2c2c33;
-  padding: 2rem;
-}
-nav .logo img {
-  width: 50%;
 }
 nav ul {
   margin: 0;
@@ -116,4 +108,89 @@ nav ul li .arrow {
   top: 30px;
   width: 20px;
   transition: transform 0.3;
+}
+
+@media screen and (max-width: 990px) {
+  nav {
+    background-color: transparent;
+  }
+  nav .logo {
+    background-color: #2c2c33;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .logo img {
+    width: auto;
+    height: 4rem;
+    width: 4rem;
+  }
+  nav .logo img:nth-child(2) {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+  }
+  nav ul {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  nav ul li:has(:checked) .subMenu {
+    transition: background-color 0.3s;
+  }
+}
+@media screen and (max-width: 390px) {
+  nav {
+    background-color: #313138;
+  }
+  nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  nav .logo img {
+    width: 5rem;
+    height: 5rem;
+  }
+  nav .logo img:nth-child(2) {
+    display: none;
+  }
+  nav ul {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  nav ul li:has(:checked) .subMenu {
+    transition: background-color 0.3s;
+  }
+  .mobile {
+    background-color: transparent;
+  }
+  .mobile .logo {
+    background-color: #2c2c33;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile .logo img {
+    width: auto;
+    height: 4rem;
+    width: 4rem;
+  }
+  .mobile .logo img:nth-child(2) {
+    height: 3rem;
+    width: 3rem;
+    display: block;
+  }
+  .mobile ul {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .mobile ul li:has(:checked) .subMenu {
+    transition: background-color 0.3s;
+  }
 }/*# sourceMappingURL=Menu.css.map */
