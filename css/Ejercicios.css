@@ -205,4 +205,45 @@
   .mainContent main .content .MenuProgramas .Programa span:nth-child(2) {
     font-size: 1.4rem;
   }
+  .mainContent main .content .articulo h3 {
+    font-size: 1.2rem;
+  }
+  .mainContent main .content .articulo p {
+    font-size: 0.8rem;
+  }
+  .mainContent main .content .articulo .result span {
+    font-size: 0.8rem;
+  }
+  .mainContent main .content .articulo ul li {
+    font-size: 0.8rem;
+  }
+  .mainContent main .content .articulo .example {
+    font-size: 0.8rem;
+  }
+  .mainContent main .content .articulo .example pre {
+    font-size: 0.8rem;
+  }
+  .mainContent main .content .articulo .example pre span {
+    font-size: 0.8rem;
+  }
+  .mainContent main .content .articulo .hideCode {
+    opacity: 0;
+  }
+  .mainContent main .content .articulo .demo input {
+    padding: 0.2rem 0.5rem;
+    background-color: #e0e0e0;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .mainContent main .content .articulo .demo #result {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .mainContent main .content .articulo span {
+    font-size: 1.1rem;
+  }
 }/*# sourceMappingURL=Ejercicios.css.map */

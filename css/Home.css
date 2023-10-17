@@ -94,6 +94,7 @@ body .mainContent .Menu {
   min-height: 50%;
   border-right: 1px rgb(0, 0, 0) solid;
   box-shadow: 0px 0px 23px 3px rgba(0, 0, 0, 0.53);
+  z-index: 0;
 }
 body .mainContent main {
   flex: auto;
@@ -102,6 +103,7 @@ body .mainContent main {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 94vh;
+  z-index: 1;
 }
 body .mainContent main::-webkit-scrollbar {
   width: 8px;
