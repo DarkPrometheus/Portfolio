@@ -124,25 +124,31 @@ nav ul li .arrow {
   }
   nav .logo img {
     width: auto;
-    height: 4rem;
-    width: 4rem;
+    height: 2rem;
+    width: 2rem;
   }
   nav .logo img:nth-child(2) {
-    height: 3rem;
-    width: 3rem;
+    height: 1.5rem;
+    width: 1.5rem;
     display: block;
   }
   nav ul {
     opacity: 0;
     transition: opacity 0.3s;
   }
-  nav ul li:has(:checked) .subMenu {
-    transition: background-color 0.3s;
+  nav ul li .buttonContent img {
+    width: 1.5rem;
+  }
+  nav ul li .buttonContent span {
+    font-size: 1rem;
+  }
+  nav ul li .arrow {
+    width: rem;
   }
 }
 @media screen and (max-width: 390px) {
   nav {
-    background-color: #313138;
+    background-color: #36369e;
   }
   nav .logo {
     display: flex;
@@ -161,9 +167,6 @@ nav ul li .arrow {
   nav ul {
     opacity: 1;
     transition: opacity 0.3s;
-  }
-  nav ul li:has(:checked) .subMenu {
-    transition: background-color 0.3s;
   }
   .mobile {
     background-color: transparent;
@@ -189,8 +192,5 @@ nav ul li .arrow {
   .mobile ul {
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  .mobile ul li:has(:checked) .subMenu {
-    transition: background-color 0.3s;
   }
 }/*# sourceMappingURL=Menu.css.map */

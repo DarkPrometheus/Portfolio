@@ -121,11 +121,11 @@ nav{
             justify-content: space-between;
             img{
                 width: auto;
-                height: 4rem;
-                width: 4rem;
+                height: 2rem;
+                width: 2rem;
                 &:nth-child(2){
-                    height: 3rem;
-                    width: 3rem;
+                    height: 1.5rem;
+                    width: 1.5rem;
                     display: block;
                 }
             }
@@ -136,52 +136,14 @@ nav{
             li{
                 .buttonContent{
                     img{
-                        
+                        width: 1.5rem;
                     }
-                    a{
-                        
-                    }
-                    input{
-                        
-                    }
-                    &:hover{
-                        
-                    }
-                }
-                .subMenu{
-                    .buttonContent{
-                        
-                    }
-                    li{
-                        
-                    }
-                }
-                &:hover{
-                    
-                }
-                &:has(:checked){
-                    .buttonContent{
-                        
-                    }
-                    .subMenu{
-                        
-                        transition: background-color .3s;
-                        li{
-                            
-                        }
-                        .buttonContent{
-                            
-                        }
-                        &:hover{
-                            
-                        }
-                    }
-                    .arrow{
-                        
+                    span{
+                        font-size: 1rem;
                     }
                 }
                 .arrow{
-                    
+                    width: rem;
                 }
             }
         }
@@ -202,7 +164,7 @@ nav{
 
 @media screen and (max-width: 390px) {
     nav{
-        background-color: lighten($color: #2C2C33, $amount: 2%);
+        background-color: lighten($color: #333396, $amount: 2%);
         .logo{
             @include center;
             padding: 2rem;
@@ -217,57 +179,6 @@ nav{
         ul{
             opacity: 1;
             transition: opacity .3s;
-            li{
-                .buttonContent{
-                    img{
-                        
-                    }
-                    a{
-                        
-                    }
-                    input{
-                        
-                    }
-                    &:hover{
-                        
-                    }
-                }
-                .subMenu{
-                    .buttonContent{
-                        
-                    }
-                    li{
-                        
-                    }
-                }
-                &:hover{
-                    
-                }
-                &:has(:checked){
-                    .buttonContent{
-                        
-                    }
-                    .subMenu{
-                        
-                        transition: background-color .3s;
-                        li{
-                            
-                        }
-                        .buttonContent{
-                            
-                        }
-                        &:hover{
-                            
-                        }
-                    }
-                    .arrow{
-                        
-                    }
-                }
-                .arrow{
-                    
-                }
-            }
         }
     }
     .mobile{
@@ -293,56 +204,6 @@ nav{
         ul{
             opacity: 0;
             transition: opacity .3s;
-            li{
-                .buttonContent{
-                    img{
-                        
-                    }
-                    a{
-                        
-                    }
-                    input{
-                        
-                    }
-                    &:hover{
-                        
-                    }
-                }
-                .subMenu{
-                    .buttonContent{
-                        
-                    }
-                    li{
-                        
-                    }
-                }
-                &:hover{
-                    
-                }
-                &:has(:checked){
-                    .buttonContent{
-                        
-                    }
-                    .subMenu{
-                        transition: background-color .3s;
-                        li{
-                            
-                        }
-                        .buttonContent{
-                            
-                        }
-                        &:hover{
-                            
-                        }
-                    }
-                    .arrow{
-                        
-                    }
-                }
-                .arrow{
-                    
-                }
-            }
         }
     }
 }
