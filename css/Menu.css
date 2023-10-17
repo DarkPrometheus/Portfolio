@@ -143,12 +143,12 @@ nav ul li .arrow {
     font-size: 1rem;
   }
   nav ul li .arrow {
-    width: rem;
+    width: 2rem;
   }
 }
 @media screen and (max-width: 390px) {
   nav {
-    background-color: #36369e;
+    background-color: #313138;
   }
   nav .logo {
     display: flex;
