@@ -55,6 +55,8 @@
 }
 @media screen and (max-width: 520px) {
   .Home h1 {
+    font-size: 2.2rem;
+    width: 80%;
     text-align: center;
   }
 }/*# sourceMappingURL=Portfolio.css.map */

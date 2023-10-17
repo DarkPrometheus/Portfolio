@@ -1,5 +1,5 @@
 @import '../../../mixins/mixins';
-
+@import '../../../base/settings';
 html{
     body{
         margin: 0;
@@ -24,5 +24,17 @@ html{
     }
     img{
         width: 30px;
+    }
+}
+
+@media screen and (max-width: $telefono){
+    html{
+        body{
+            nav{
+                a{
+                    font-size: 1rem;
+                }
+            }        
+        }
     }
 }

@@ -4,7 +4,7 @@
 
 .Navbar{
     width: 100%;
-    height: 6vh;
+    height: 5rem;
     z-index: 10;
 }
 body{
@@ -23,13 +23,14 @@ body{
             //box-shadow: 3px 2px 13px 5px rgba(0,0,0,0.53);
         }
         main{
+            width: 100%;
             flex: auto;
             display: flex;
             justify-content: center;
-            @include scrollbar(hidden, auto);
-            max-height: 94vh;
             z-index: 10;
+            padding-bottom: 2rem;
             .content{
+                @include scrollbar(hidden, auto);
                 width: 60rem;
                 background-color: #eeeeee;
                 color: black;
@@ -164,6 +165,7 @@ body{
     body{
         .mainContent{
             main{
+                margin: 0;
                 .content{
                     h1{
                         font-size: 1.5rem;

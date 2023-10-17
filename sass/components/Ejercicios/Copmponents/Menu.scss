@@ -281,11 +281,11 @@ nav{
             justify-content: space-between;
             img{
                 width: auto;
-                height: 4rem;
-                width: 4rem;
+                height: 2rem;
+                width: 2rem;
                 &:nth-child(2){
-                    height: 3rem;
-                    width: 3rem;
+                    height: 1.5rem;
+                    width: 1.5rem;
                     display: block;
                 }
             }
@@ -324,7 +324,6 @@ nav{
                         
                     }
                     .subMenu{
-                        
                         transition: background-color .3s;
                         li{
                             
