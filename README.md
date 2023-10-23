@@ -1,2 +1,3 @@
-# Portfolio
-My personal web page
+# ToDo
+
+- Agregar comentarios explicando que hace el codigo en los ejemplos de codigo

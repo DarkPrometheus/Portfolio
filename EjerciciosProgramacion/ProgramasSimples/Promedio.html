@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/styles.css" />
+        <link rel="stylesheet" href="../../css/Home.min.css" />
+        <link rel="stylesheet" href="../../css/Ejercicios.min.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100;1,500&family=Roboto:wght@400;500;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+
+        <link href="../../css/prism.css" rel="stylesheet" />
+
+        <title>Círculos</title>
+    </head>
+    <body>
+        <iframe class="Navbar" src="../Components/Navbar.html" frameborder="0"></iframe>
+        <div class="mainContent">
+            <iframe id="menu" class="Menu" src="../Components/Menu.html" frameborder="0"></iframe>
+            <main>
+                <div class="content">
+                    <h1>📊 Promedio</h1>
+                    <article class="articulo">
+                        <h3>Instrucciones</h3>
+                        <p>Escriba un programa que calcule el promedio de 4 calificaciones ingresadas por el usuario:</p>
+
+                        <h3>Resultado esperado</h3>
+                        <p class="result">
+                            <span>Primera calificacion: <i>55</i></span>
+                            <span>Segunda calificacion: <i>71</i></span>
+                            <span>Tercera calificacion: <i>46</i></span>
+                            <span>Cuarta calificacion: <i>87</i></span>
+                            <span>El promedio es: 64.75</span>
+                        </p>
+
+                        <h3>Explicacion</h3>
+                        <p>Este ejercicio se centra en calcular el promedio de un conjunto de calificaciones, una operación común en matemáticas y programación.</p>
+
+                        <h3>Pasos clave</h3>
+                        <ul>
+                            <li><b>Solicitud de entrada:</b> En este ejercicio, el primer paso es solicitar al usuario que ingrese cuatro calificaciones. Debes asegurarte de que el usuario proporcione valores numéricos para las calificaciones.</li>
+                            <li><b>Suma de calificaciones:</b> Luego, debes sumar todas las calificaciones ingresadas. Para ello, sumas los valores de las cuatro calificaciones.</li>
+                            <li><b>Cálculo del promedio:</b> El siguiente paso consiste en calcular el promedio de las calificaciones. Esto se logra dividiendo la suma total de las calificaciones por 4 (el número de calificaciones).</li>
+                            <li><b>Generación de salida adecuada:</b> Finalmente, debes generar la salida deseada que incluye las calificaciones ingresadas por el usuario y el cálculo del promedio.</li>
+                        </ul>
+
+                        <div class="exampleTitle">
+                            <h3>Ejemplo resuelto</h3>
+                            <img id="closedEye" src="../img/closedEye.png" alt="">
+                            <img id="eye" style="display: none;" src="../img/eye.png" alt="">
+                        </div>
+                        <div id="codeContainer" class="example hideCode">
+                            <div class="tabs">
+                                <span id="btnCsharp" class="active">C#</span>
+                                <span id="btnJs">JS</span>
+                            </div>
+                            <pre id="csharpCode">
+                                <code class="language-csharp">
+        public static void Promedio()
+        {
+            string[] stringValues = new string[4] {"primera", "segunda", "tercera", "cuarta"};
+            int[] calificaciones = new int[4];
+
+            for (int i = 0; i < 4; i++)
+            {
+                Console.Write(String.Format($"Ingresa la {stringValues[i]} calificacion: "));
+                string input = Console.ReadLine();
+
+                bool done = false;
+                while (!done)
+                {
+                    if (IsInt(input))
+                    {
+                        done = true;
+                        calificaciones[i] = int.Parse(input);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Debes ingresar un valor numerico: ");
+                        input = Console.ReadLine();
+                        Console.Clear();
+                    }
+                }
+            }
+            Console.Clear();
+
+            int suma = 0;
+            for (int i = 0; i < 4; i++)
+                suma += calificaciones[i];
+
+            for (int i = 0; i < 4; i++)
+                Console.WriteLine(String.Format($"{stringValues[i]} calificacion: ") + calificaciones[i]);
+            Console.WriteLine("Promedio: " + ((double)suma / 4));
+        }
+
+        public static bool IsInt(string input)
+        {
+            int value;
+            if (int.TryParse(input, out value))
+                return true;
+            else
+                return false;
+        }
+                                </code>
+                                <img id="csharpCopy" src="../img/copia.png" alt="">
+                            </pre>
+                            <pre style="display: none;" id="jsCode">
+                                <code class="language-csharp">
+        Pendiente
+                                </code>
+                                <img id="jsCopy" src="../img/copia.png" alt="">
+                            </pre>
+                        </div>
+
+                        <h3>Demostracion</h3>
+                        <div class="demo">
+                            <div style="margin-top: 1rem;">
+                                <span>Ingresa el radio:</span>
+                                <input id="input" onkeypress="Ciruclo(event)" type="text">
+                            </div>
+                            <span id="result" style="display: flex; flex-direction: column;">
+                                <span style="font-weight: bold;" id="perimetro"></span>
+                                <span style="font-weight: bold;" id="area"></span>
+                            </span>
+                        </div>
+
+                        <div class="Navegacion">
+                            
+                        </div>
+                    </article>
+                    <div class="footer"></div>
+                </div>
+            </main>
+        </div>
+
+        <script src="../../js/prism.js"></script>
+        <script src="../../js/funciones.js"></script>
+
+        <script src="../../js/Demostraciones.js"></script>
+
+        <script src="../../js/menuResponsive.js"></script>
+    </body>
+</html>

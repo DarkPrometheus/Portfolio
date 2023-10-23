@@ -13,7 +13,7 @@
 
         <link href="../../css/prism.css" rel="stylesheet" />
 
-        <title>Saludo</title>
+        <title>Círculos</title>
     </head>
     <body>
         <iframe class="Navbar" src="../Components/Navbar.html" frameborder="0"></iframe>
@@ -21,25 +21,27 @@
             <iframe id="menu" class="Menu" src="../Components/Menu.html" frameborder="0"></iframe>
             <main>
                 <div class="content">
-                    <h1>👋 Saludo</h1>
+                    <h1>🔵 Círculos</h1>
                     <article class="articulo">
                         <h3>Instrucciones</h3>
-                        <p>Escriba un programa que pida al usuario que escriba su nombre, y lo salude llamándolo por su nombre.</p>
+                        <p>Escriba un programa que reciba como entrada el radio de un círculo y entregue como salida su perímetro y su área:</p>
 
                         <h3>Resultado esperado</h3>
                         <p class="result">
-                            <span>Ingrese su nombre: <i>Perico</i></span>
-                            <span>Hola, Perico</span>
+                            <span>Ingrese el radio: <i>5</i></span>
+                            <span>Perimetro: 31.4</span>
+                            <span>Área: 78.5</span>
                         </p>
 
                         <h3>Explicacion</h3>
-                        <p>Este ejercicio es un ejercicio básico que se asemeja al famoso "Hola Mundo" en el mundo de la programación, pero en lugar de simplemente imprimir "Hola, Mundo", estamos interactuando con el usuario.</p>
+                        <p>Este ejercicio es un programa que calcula el perímetro y el área de un círculo basándose en el radio proporcionado por el usuario. </p>
 
                         <h3>Pasos clave</h3>
                         <ul>
-                            <li><b>Solicitud de entrada:</b> En este ejercicio, el primer paso es solicitar al usuario que ingrese su nombre. Esto se puede lograr utilizando una función de entrada en el lenguaje de programación que estés utilizando.</li>
-                            <li><b>Almacenamiento en una variable:</b> Una vez que el usuario ingrese su nombre, debes almacenarlo en una variable. En este caso, necesitarás una variable para almacenar el nombre del usuario.</li>
-                            <li><b>Generación de salida adecuada:</b> Luego, debes generar la salida deseada. En este ejercicio, la salida esperada es saludar al usuario por su nombre. Debes utilizar la variable que contiene el nombre del usuario para crear la cadena de saludo.</li>
+                            <li><b>Solicitud de entrada:</b> En este ejercicio, el primer paso es solicitar al usuario que ingrese el radio del círculo. Debes asegurarte de que el usuario proporcione un valor numérico para el radio.</li>
+                            <li><b>Cálculo del perímetro:</b> El siguiente paso implica calcular el perímetro del círculo. El perímetro de un círculo se calcula mediante la fórmula: <i>2 * π * radio</i>.</li>
+                            <li><b>Cálculo del área:</b> Luego, debes calcular el área del círculo. El área de un círculo se calcula mediante la fórmula: <i>π * radio^2</i>.</li>
+                            <li><b>Generación de salida adecuada:</b> Finalmente, debes generar la salida deseada. En este ejercicio, la salida esperada incluye el perímetro y el área del círculo.</li>
                         </ul>
 
                         <div class="exampleTitle">
@@ -54,21 +56,52 @@
                             </div>
                             <pre id="csharpCode">
                                 <code class="language-csharp">
-    private static void Main(string[] args)
+    Console.Write("Ingresa el radio: ");
+    string input = Console.ReadLine();
+    double radio = 0;
+    bool done = false;
+
+    while (!done)
     {
-        Console.Write("Ingrese su nombre:");
-        string nombre = Console.ReadLine();
-        Console.WriteLine("Hola, " +  nombre);
+        Console.Clear();
+        if (double.TryParse(input, out radio))
+        {
+            done = true;
+            Console.WriteLine("Radio: " + radio);
+        }
+        else
+        {
+            Console.Write("Ingresa un numero: ");
+            input = Console.ReadLine();
+        }
     }
+
+    double area = Math.PI * Math.Pow(radio, 2);
+    double perimetro = 2 * Math.PI * radio;
+
+    Console.WriteLine("Perimetro: " + perimetro);
+    Console.WriteLine("Area: " + area);
                                 </code>
                                 <img id="csharpCopy" src="../img/copia.png" alt="">
                             </pre>
                             <pre style="display: none;" id="jsCode">
                                 <code class="language-csharp">
-    let nombre = prompt("Ingrese su nombre:");
+    let radio = parseFloat(prompt("Ingresa el radio:"));
+    let done = false;
 
-    alert("Hola, " + nombre);
+    while(!done){
+        if(radio != undefined &&  !isNaN(radio)){
+            done = true;
+        }
+        else{
+            radio = parseFloat(prompt("Ingresa un numero:"));
+        }
+    }
 
+    let area = Math.PI * Math.pow(radio, 2);
+    let perimetro = 2 * Math.PI * radio;
+
+    alert("Radio: " + radio + "\n" + "Perimetro: " + perimetro + "\n" + "Area: " + area);
                                 </code>
                                 <img id="jsCopy" src="../img/copia.png" alt="">
                             </pre>
@@ -77,10 +110,14 @@
                         <h3>Demostracion</h3>
                         <div class="demo">
                             <div style="margin-top: 1rem;">
-                                <span>Ingrese su nombre:</span>
-                                <input id="input" onkeypress="Saludo(event)" type="text">
+                                <span>Ingresa el radio:</span>
+                                <input id="input" onkeypress="Ciruclo(event)" type="text">
                             </div>
-                            <span id="result"></span>
+                            <span id="result" style="display: flex; flex-direction: column;">
+                                <span style="font-weight: bold;" id="radio"></span>
+                                <span style="font-weight: bold;" id="perimetro"></span>
+                                <span style="font-weight: bold;" id="area"></span>
+                            </span>
                         </div>
 
                         <div class="Navegacion">
